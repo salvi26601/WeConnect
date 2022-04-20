@@ -1,0 +1,145 @@
+.main-body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.vl{
+    border-left: 6px solid lightgrey;
+    height: 40px;
+    margin: 0 1%;
+}
+
+.main-body .navbar-nav{
+    width: 100%;
+}
+
+.main-body .nav-item{
+    padding: 5px 1%;
+}
+
+.noresult{
+    margin-bottom: 3px;
+    padding-left: 7px;
+}
+
+.search{
+    margin-right: 4%;
+}
+
+.search .btn{
+    margin-left: 2%;
+}
+
+#searchResults{
+    background: #f2f3f5;
+    position: absolute;
+    width: 154px;
+    top: 54px;
+    border: 1px solid lightgrey;
+    display: none;
+    border-radius: 0.25rem;
+    padding-top: 4px;
+}
+
+#searchResults a{
+    color: black;
+    text-decoration: none;
+    padding-left: 11px;
+}
+
+#searchResults hr{
+    margin: 5px !important;
+}
+
+.searchItems{
+    margin-bottom: 6px !important;
+}
+
+.searchItems:hover{
+    background-color: white;
+}
+
+.link{ font-size: 2.5vh; }
+
+.icon{ padding-right: 5px; }
+
+.general{
+    margin: 3% 10%;
+    width: 85% !important ;
+}
+
+.general .postHead{
+    padding-bottom: 0;
+    margin-left: 0;
+}
+
+.toggleInfo a{
+    color: slategray;
+}
+
+.singlePost{
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    padding: 3%;
+    margin-bottom: 3%;
+}
+
+.feed-area{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.feed-area .h1{ 
+    margin-bottom: 2%; 
+    font-size: 3em;
+}
+
+.feed-explain{
+    width: 53%;
+    margin: 0px 24%;
+    font-size: 3vh;
+    color: grey;
+}
+
+
+.hr{
+    margin: 10% 10% 2%;
+}
+
+.footer{
+    text-align: center;
+    color: grey;
+    margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 991px){
+    .vl{ display: none; }
+    .feed-explain{
+        width: 75%;
+        margin: 0px 12%;
+    }
+    .main-body .search{ padding-left: 0; }
+    #searchResults{
+        width: 86%;
+        top: 97%;
+    }
+}
+
+@media only screen and (max-width: 735px){
+    .feed-area{ margin-top: 15%; }
+    #searchResults{ width: 82%; }
+}
+
+@media only screen and (max-width: 525px){
+    .feed-area{ margin-top: 20%; }
+    .feed-area .h1{ margin-bottom: 7%; }
+    .general{ margin: 6% 10%; width: 100% !important;}
+    #searchResults{ width: 77%; }
+}
+
+@media only screen and (max-width: 385px){
+    #searchResults{ width: 72%; }
+}
+
+@media only screen and (max-width: 295px){
+    #searchResults{ width: 66%; }
+}

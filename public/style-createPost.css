@@ -1,0 +1,25 @@
+.post-div{
+    margin-top: 7%;
+}
+
+.post-div .h1{ margin-left: 15%; }
+
+.form-post{ margin: 0 15%; }
+
+.form-post label{ font-size: 3vh; }
+
+.form-post input{ width: 100%; }
+
+.postBody{
+    margin: 2% 0;
+}
+
+@media only screen and (max-width: 991px){
+    .post-div{ margin-top: 10%; }
+    .post-div .h1{ margin-left: 0; }
+    .post-body .form-post{ padding-left: 0; }
+}
+
+@media only screen and (max-width: 450px){
+    .form-post{ margin: 0 9%; }
+}

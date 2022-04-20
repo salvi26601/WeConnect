@@ -1,0 +1,99 @@
+<%- include('partials/header') %>
+
+<body class="main-body profile-body">
+
+    <%- include('partials/navbar') %>
+
+    <div class="profile">
+
+        <% if(curruser.username != user.username) {  %>
+            <h1 class="h1 profile-head"><i class="fas fa-user-circle icon"></i><%= curruser.username %>
+            <% if(flag === 0) { %>
+                <a href="/follow" id="buttonclick"><button id="follow" type="button" class="followbtn btn btn-primary">Follow  <i class="fas fa-user-plus"></i></button></a></h1>
+            <% } else { %>
+                <a href="/unfollow" id="buttonclick"><button id="follow" type="button" class="followbtn btn btn-danger">Unfollow  <i class="fas fa-user-plus"></i></button></a></h1>
+            <% } %>    
+            
+        <% } else { %>
+            <h1 class="h1 profile-head"><i class="fas fa-user-circle icon"></i><%= user.username %></h1>
+        <% } %>
+            
+
+        <% if(curruser.username != user.username) {  %>
+            <div class="chatoverhead">
+                <a href="#chatbox" onclick="chatuser('<%=user.username%>' , '<%=curruser.username%>')" class="trigger"><i class="fab fa-facebook-messenger icon"></i>Chat</a>
+            </div>
+        <% } %>
+
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="post-tab" data-bs-toggle="tab" data-bs-target="#post" type="button" role="tab" aria-controls="home" aria-selected="true">Posts: <%= posts.length %></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="follower-tab" data-bs-toggle="tab" data-bs-target="#follower" type="button" role="tab" aria-controls="profile" aria-selected="false">Followers: <%= countFollowers %></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="following-tab" data-bs-toggle="tab" data-bs-target="#following" type="button" role="tab" aria-controls="contact" aria-selected="false">Following: <%= countFollowings %></button> 
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+        
+            <div id="post" class="container-fluid myposts tab-pane fade show active" role="tabpanel" aria-labelledby="post-tab">
+                <% if(posts.length != 0) { %>
+                    
+                    <% posts.reverse().forEach( function(post) {     %>
+                        <div class="container-fluid showposts">
+                            <p class="post"><i class="far fa-plus-square"></i>
+                                <b><%= post.title %></b> 
+                                <span>on <%= post.date.toString().slice(0,24) %></span>
+                            </p>
+                        </div>
+                    <% }) %> 
+                
+                <% } else { %>
+
+                    <p class="noposts">No posts yet... Tap on the "Create post" button on the top to start composing posts for your profile.</p>
+
+                <% } %>
+            </div>
+
+            <div id="follower" class="tab-pane fade" role="tabpanel" aria-labelledby="follower-tab">
+
+                <p class="noone">Sorry!!...Noone follows you yet.</p>
+
+            </div>
+
+            <div id="following" class="tab-pane fade" role="tabpanel" aria-labelledby="following-tab">
+
+                <p class="noone">Use the "Search" feature above to follow your favourite people.</p>
+
+            </div>
+
+        </div>
+    </div>
+    
+    <div id="chatbox">
+       
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid chathead">
+                <p>Chat</p>
+                <a id="closebtn" href="#chatbox" class="btn-close btn-close-white"></a>
+            </div>
+        </nav>
+      
+        <div class="message_area">
+            
+        </div>
+
+        <div>
+            <textarea id="textarea" rows="1" cols="50" placeholder="Write a message..."></textarea>
+        </div>
+
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- Sign up Form section -->
+<div class="col-lg-6 form">
+    <h1 class="h1 form-head">Create your account</h1>
+    <form action="/register" method="POST">
+        <!-- Username -->
+        <div class="mb-3 change">
+            <label for="UserName" class="form-label">Username</label>
+            <input type="text" name="username" placeholder="What should we call you?" class="form-control" id="UserName" required>
+        </div>
+        <!-- Email -->
+        <div class="mb-3 change">
+            <label for="Email" class="form-label">Email address</label>
+            <input type="email" name="Email" placeholder="abc@example.com" class="form-control" id="Email" aria-describedby="emailHelp" required>
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <!-- Password -->
+        <div class="mb-3 change">
+            <label for="Password" class="form-label">Password</label>
+            <input type="password" name="password" placeholder="Create a password" class="form-control" id="Password" required>
+        </div>
+        <!-- Date of birth -->
+        <div class="mb-3 change">
+            <label for="dob" class="form-label">Date of birth</label>
+            <input type="date" name="dateOfBirth" placeholder="" class="form-control" id="dob" required>
+        </div>
+        <!-- Gender -->
+        <div class="mb-3">
+            <span class="gender"><input type="radio" name="gender" value="male">Male</span> 
+            <span class="gender"><input type="radio" name="gender" value="female">Female</span>
+            <span class="gender"><input type="radio" name="gender" value="others">Others</span>
+        </div>
+        <!-- Checkbox -->
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" onchange=onCheck() id="Check">
+            <label class="form-check-label" for="Check">I have agreed to all the terms and conditions</label>
+        </div>
+        <button type="submit" class="btn btn-success signup-btn" id="signup" disabled>Sign up for WeConnect</button>
+    </form>
+
+    <div class="container-fluid log-in">
+        <p>Already have an account? <a href="/login">Log in</a></p>
+    </div>
+</div>

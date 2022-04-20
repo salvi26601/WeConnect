@@ -1,0 +1,40 @@
+<%- include('partials/header') %>
+
+<body class="main-body">
+
+    <!-- Navbar Section -->
+    <%- include('partials/navbar') %>
+
+    <div class="container-fluid general">
+        <% if(posts.length === 0) { %>
+            <div class="container-fluid feed-area">
+                <h1 class="h1">Hello <b><%= user.username %></b>, your feed is empty.</h1>
+                <p class="feed-explain">
+                    Your feed displays the latest posts from the people you follow. If you don't have any friends to follow that's okay; you can 
+                    use the "Search" feature in the top menu bar to find your friends and people with similar interests and then follow them.
+                </p>
+            </div>
+        <% } else { %>
+            <% posts.reverse().forEach( function(post) {     %>
+
+                <div class="container-fluid singlePost">
+                    <h1 class="h1 postHead"><%= post.title %></h1>
+                    <p><i class="fas fa-user-circle icon"></i>Posted by <a href="/profile"><%= user.username %>
+                        </a> on <%= post.date.toString().slice(0,15) %>
+                    </p>
+                    <p id="original<%= post._id %>" class="toggleInfo"><%= post.content.substring(0,200) + "..." %>
+                        <a href="#" onclick="more_info('<%= post._id %>')">Read more</a>
+                    </p>
+                    <p id="more<%= post._id %>" class="toggleInfo" style="display: none;"><%= post.content %>
+                        <a href="#" onclick="less_info('<%= post._id %>')">  Read less</a>
+                    </p>
+                </div>
+        
+            <% }) %>
+        <% } %> 
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

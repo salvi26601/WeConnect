@@ -1,0 +1,173 @@
+/* Navbar section */
+
+.body{
+    font-family: 'Montserrat' , 'sans-serif';
+    background-color: #EEEEEE;
+}
+
+.header-div .navbar-brand{
+    margin: 0 35% 0 5%;
+}
+
+.button{
+    width: 30%;
+}
+
+/* Main div */
+
+.body .main-div{
+    margin: 8% 2% 0;
+}
+
+/* About section */
+
+.h1{
+    padding-bottom: 3rem;
+    margin-left: 4%;
+}
+
+.features{
+    text-align: left;
+}
+
+.features i{
+    width: 15%;
+    float: left;
+    font-size: 2.5rem;
+    margin-bottom: 7%;
+}
+
+.features p{
+    color: darkgrey;
+    width: 90%;
+}
+
+/* Form section */
+
+.form-head{
+    display: none;
+}
+
+.body .form{
+    padding-left: 4%;
+}
+
+.change label{
+    font-weight: bold;
+}
+
+.change input{
+    width: 85%;
+}
+
+.gender{
+    padding-right: 5%;
+}
+
+.signup-btn{
+    width: 85%;
+    text-align: center;
+}
+
+.body .log-in{
+    margin: 5% 0 0 18%;
+}
+
+.body .sign-up{
+    margin: 5% 0 0 27%;
+}
+
+/* Footer Section */
+
+.hr{
+    margin: 10% 10% 2%;
+}
+
+.footer{
+    text-align: center;
+    color: grey;
+    margin-bottom: 5%;
+}
+
+/* Changing the style according to screen */
+
+
+@media only screen and (max-width: 1295px){
+    .body .log-in{ margin-left: 13%; }
+    .body .sign-up{ margin-left: 23%; }
+} 
+
+@media only screen and (max-width: 1058px){
+    .features{ margin-bottom: 8%;}
+    .features i{ margin-bottom: 13%; }
+    .body .log-in{ margin-left: 6%; }
+    .body .sign-up{ margin-left: 18%; }
+}
+
+@media only screen and (max-width: 991px){
+    .about{ margin-bottom: 5%; }
+    .about .info{ padding-left: 15%; }
+    .h1{ text-align: center; }
+    form{ padding-left: 15%; }
+    .form-head{ display: block; }
+    .body .log-in{ margin-left: 0; text-align: center; }
+    .body .sign-up{ margin-left: 39%; }
+}
+
+@media only screen and (max-width: 782px){
+    .about .info{ padding-left: 10%; }
+    form{ padding-left: 10%; }
+    .body .sign-up{ margin-left: 32%; }
+}
+
+@media only screen and (max-width: 719px){
+    .features i {
+        margin-bottom: 10%;
+        margin-right: 4%;
+    }
+    .body .sign-up{ margin-left: 30%; }
+}
+
+@media only screen and (max-width: 612px){
+    .features i {
+        margin-bottom: 13%;
+        margin-right: 10%;
+    }
+    .change input{ width: 98% }
+    .body .sign-up{ margin-left: 28%; }
+}
+
+@media only screen and (max-width: 510px){
+    .features i { margin-bottom: 23%; }
+    .hr{ margin-top: 15%; }
+    .body .sign-up{ margin-left: 22%; }
+}
+
+@media only screen and (max-width: 482px){
+    .about{ margin-bottom: 15%; }
+    .about .info{ padding-left: 3%; }
+    form{ padding-left: 3%; }
+    .body .sign-up{ margin-left: 18%; }
+}
+
+@media only screen and (max-width: 449px){
+    .features i { margin-right: 7%; }
+}
+
+@media only screen and (max-width: 433px){
+    .features i { margin-right: 5%; }
+    .body .sign-up{ margin-left: 14%; }
+}
+
+@media only screen and (max-width: 426px){
+    .features { width: 22rem; }
+}
+
+@media only screen and (max-width: 410px){
+    .header-div .navbar-brand{ margin: 0 5%; }
+    .features{ width: auto; }
+    .features i{ float: none; margin: 0 47% 6%; }
+    .features div{ text-align: center; margin-left: 12%; }
+    .features p{ margin-left: 5%; } 
+    .body .sign-up{ margin-left: 7%; }
+}

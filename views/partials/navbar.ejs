@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container-fluid">
+
+        <!-- Brand name and the logo -->
+        <a class="navbar-brand" href="/">
+            <img src="/favicon_io/android-chrome-512x512.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            WeConnect
+        </a>
+
+        <div class="vl"></div>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Home button -->
+                <li class="nav-item link">
+                    <a class="nav-link active" aria-current="page" href="/main"><i class="fas fa-home"></i></a>
+                </li>
+                <!-- Username -->
+                <li class="nav-item link">
+                    <a class="nav-link" href="/profile"><i class="fas fa-user-circle icon"></i><%= user.username %></a>
+                </li>
+                <!-- Messenger -->
+                <!-- <li class="nav-item link">
+                    <a class="nav-link" href="#"><i class="fab fa-facebook-messenger icon"></i>Chat</a>
+                </li> -->
+                <!-- Create post button -->
+                <li class="nav-item">
+                    <a type="button" href="/createPost" class="btn btn-success">Create Post</a>
+                </li>
+                <!-- Sign out button -->
+                <li class="nav-item">
+                    <a type="button" href="/logout" class="btn btn-primary">Sign Out</a>
+                </li>
+            </ul>
+            <!-- Search input -->
+            <form class="d-flex search">
+                <input class="form-control me-2" id="search-box" type="text" placeholder="Search" onkeyup="sendData(this)" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                <section id="searchResults">
+
+                </section>
+            </form>
+        </div>
+    </div>
+    
+</nav>

@@ -1,0 +1,23 @@
+<!-- Log in form section -->
+<div class="col-lg-6 form">
+    <h1 class="h1 form-head">Log in to your account</h1>
+    <form action="/login" method="POST">
+        <!-- Username -->
+        <div class="mb-3 change">
+            <label for="UserName" class="form-label">Username</label>
+            <input type="text" name="username" placeholder="Name" class="form-control" id="UserName" required>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3 change">
+            <label for="Password" class="form-label">Password</label>
+            <input type="password" name="password" placeholder="Password" class="form-control" id="Password" required>
+        </div>
+
+        <button type="submit" class="btn btn-success signup-btn" id="signup">Log in to WeConnect</button>
+    </form>
+
+    <div class="container-fluid sign-up">
+        <p>New here? <a href="/register">Sign up</a></p>
+    </div>
+</div>

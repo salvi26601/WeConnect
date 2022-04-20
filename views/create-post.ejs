@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<body class="main-body post-body">
+
+    <!-- Navbar Section -->
+    <%- include('partials/navbar') %>
+
+    <div class="container-fluid post-div">
+        <h1 class="h1">Compose</h1>
+        <form class="form-post" action="/compose" method="POST">
+            <div class="form-group">
+                <section class="title">
+                    <label>Title:</label>
+                    <input class="form-control" type="text" name="postTitle">
+                </section>
+                
+                <section class="postBody">
+                    <label>Post:</label>
+                    <textarea class="form-control" name="postBody" rows="10" cols="30"></textarea>
+                </section>
+            </div>
+
+            <button class="btn btn-primary" type="submit" name="button">Save new post</button>
+        </form>
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>

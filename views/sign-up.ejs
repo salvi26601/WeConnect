@@ -1,0 +1,55 @@
+<%- include('partials/header') %>
+
+<body class="body">
+    
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark header">
+        <div class="container-fluid header-div">
+            <a class="navbar-brand" href="#">
+                <img src="./favicon_io/android-chrome-512x512.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                WeConnect
+            </a>
+        </div>
+    </nav>
+
+    <!-- Body section with the about and form -->
+    <div class="container-fluid">
+        <div class="row  main-div">
+
+            <!-- About section -->
+            <div class="col-lg-6 about">
+                <h1 class="h1">Remember expressing?</h1>
+                <div class="container-fluid info">
+                    <section class="features">
+                        <i class="fas fa-address-card "></i>
+                        <div>
+                            <h3 class="h3">Post your thoughts</h3>
+                            <p>You can write up a blog and express your feelings with the world to hear</p>
+                        </div>
+                    </section>
+                    <section class="features">
+                        <i class="fas fa-comment-dots"></i>
+                        <div>
+                            <h3 class="h3">Connect with people</h3>
+                            <p>You can chat with your loved ones anytime anywhere or even strangers :-)</p>
+                        </div>
+                    </section>
+                    <section class="features">
+                        <i class="fas fa-share-alt"></i>
+                        <div>
+                            <h3 class="h3">And much more...</h3>
+                            <p>Check and share updates from your friends & family and always be in touch</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <%- include('partials/' + sign) %>
+
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+</body>
+</html>
